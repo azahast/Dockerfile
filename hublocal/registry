@@ -1,0 +1,9 @@
+#Following CMD to create a HUB local in your ambient.
+docker container run -d -p 5000:5000 --restart=always --name registry registry
+
+#Explanations 
+#docker container run : create a new container and start it.
+#-d : parameter of run to start new container in daemon mode
+# -p : Port where container will be listen
+# --restart=always : In case of problem and your container to be off with this parameter it will go UP again.
+# --name : The name of your container
