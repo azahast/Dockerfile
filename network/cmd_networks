@@ -1,0 +1,47 @@
+#Additing DNS server for your container
+docker container run -ti --dns 8.8.8.8 debian
+
+#Testing
+~#: cat /etc/resolv.cong
+########################################################
+
+#Additing a hostname to Container
+docker run -ti --hostname myhostname debian
+
+#Testing
+~#: cat /etc/hostname
+########################################################
+
+#Linking Containers
+#Simulation
+docker run -ti --name container1 debian
+
+#Exit Container but not kill it.
+#Linking now
+docker container run -ti --link container1 --name container2 debian
+
+#Testing the Link
+ping container1 or container2 (depends on wich container you logged)
+#or
+cat /etc/hosts
+
+#Expose
+docker container run -ti --expose 80 debian
+
+#Publish 
+docker run --publich or (-p) 8080:80 debian
+#Where
+#8080 por of your container
+#80 por of your Host Docker
+
+#Changing MAC Address
+docker container run -ti --mac-address 12:10:DE:AF:00:3B debian
+#Testing
+ip addr
+
+
+
+
+
+
+
