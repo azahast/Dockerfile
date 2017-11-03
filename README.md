@@ -1,3 +1,3 @@
 # Dockerfile
 
-<p>Serie of Dockerfiles to use for studies</p>
+<p>Serie of Dockerfiles and Files to use for studies</p>
